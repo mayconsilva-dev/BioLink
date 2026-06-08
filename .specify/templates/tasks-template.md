@@ -61,14 +61,16 @@ description: "Task list template for feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-Examples of foundational tasks (adjust based on your project):
+Constitution-driven foundation (Biolink — adjust paths as needed):
 
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
+- [ ] T004 Create `src/types.ts` with BioLinkConfig, LinkItem, and component prop interfaces
+- [ ] T005 Create `src/config.ts` as the sole customization entry point (profile, links, SEO)
+- [ ] T006 [P] Enable TypeScript `strict: true` in `tsconfig.json` and `tsconfig.app.json`
+- [ ] T007 [P] Create or verify `design-system.md` (colors, typography, spacing tokens)
+- [ ] T008 [P] Add base CSS variables from `design-system.md` in `src/index.css`
+- [ ] T009 Configure Vite `base` for GitHub Pages deployment
+- [ ] T010 [P] Add SEO helpers: meta tags + JSON-LD generation from config
+- [ ] T011 Verify `vite build` produces static `dist/` with no server requirements
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -151,11 +153,12 @@ Examples of foundational tasks (adjust based on your project):
 
 **Purpose**: Improvements that affect multiple user stories
 
+- [ ] TXXX [P] Accessibility audit: aria-labels, alt text, contrast (WCAG AA)
+- [ ] TXXX [P] SEO validation: meta tags, Open Graph, JSON-LD, sitemap.xml
+- [ ] TXXX Mobile layout check at 320px across all components
+- [ ] TXXX Constitution Check: confirm config-only customization path
+- [ ] TXXX GitHub Pages deploy dry-run from `dist/`
 - [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
 
 ---

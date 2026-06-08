@@ -81,8 +81,8 @@
 ## Requirements *(mandatory)*
 
 <!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right functional requirements.
+  Constitution alignment (Biolink): personalization via config.ts only;
+  accessibility (aria-label, alt, WCAG AA); SEO meta + JSON-LD; mobile 320px.
 -->
 
 ### Functional Requirements
@@ -92,6 +92,16 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+
+### Non-Functional Requirements (Constitution)
+
+- **NFR-001**: End-user content changes MUST require edits only in `src/config.ts`
+- **NFR-002**: Page MUST render correctly at 320px viewport width
+- **NFR-003**: All links MUST include accessible names (`aria-label` or visible text)
+- **NFR-004**: All images MUST include appropriate `alt` attributes
+- **NFR-005**: Color contrast MUST meet WCAG 2.1 AA minimums
+- **NFR-006**: Page MUST include structured SEO (meta tags + JSON-LD from config)
+- **NFR-007**: Production build MUST deploy as static files (GitHub Pages target)
 
 *Example of marking unclear requirements:*
 

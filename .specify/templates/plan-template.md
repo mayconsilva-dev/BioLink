@@ -40,7 +40,19 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Verify compliance with `.specify/memory/constitution.md` (Biolink v1.0.0):
+
+| Gate | Requirement | Status |
+|------|-------------|--------|
+| Config | End-user customization needs only `src/config.ts` edits | ⬜ |
+| Types | New entities/interfaces in `types.ts`; no implicit `any` | ⬜ |
+| Dependencies | No new production deps without Complexity Tracking row | ⬜ |
+| Design | UI uses tokens from `design-system.md`; works at 320px | ⬜ |
+| A11y | Links have `aria-label`; images have `alt`; WCAG AA contrast | ⬜ |
+| SEO | Meta/OG/JSON-LD impacts documented if public page changes | ⬜ |
+| Deploy | `vite build` remains static CDN / GitHub Pages compatible | ⬜ |
+
+Mark each gate ✅ pass, ❌ fail (justify in Complexity Tracking), or N/A.
 
 ## Project Structure
 
