@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ProfileCardProps } from '../types';
 import { formatHandle, getInitials } from '../lib/config-utils';
 import defaultAvatar from '../assets/avatar.jpg';
@@ -12,6 +12,13 @@ export function ProfileCard({
 }: ProfileCardProps) {
   const [imgSrc, setImgSrc] = useState(avatarUrl);
   const [showFallback, setShowFallback] = useState(false);
+
+  // O perfil pode chegar de forma assíncrona (Supabase): reseta a imagem
+  // sempre que a URL muda, para refletir o avatar atualizado.
+  useEffect(() => {
+    setImgSrc(avatarUrl);
+    setShowFallback(false);
+  }, [avatarUrl]);
 
   const handleImageError = () => {
     if (imgSrc !== defaultAvatar) {

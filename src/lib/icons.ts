@@ -39,3 +39,11 @@ const iconMap: Record<LucideIconName, LucideIcon> = {
 export function getLucideIcon(name: LucideIconName): LucideIcon {
   return iconMap[name] ?? Link;
 }
+
+/** Todos os nomes de ícone disponíveis (usado no seletor do editor). */
+export const ICON_NAMES = Object.keys(iconMap) as LucideIconName[];
+
+/** Type guard: verifica se uma string é um nome de ícone suportado. */
+export function isIconName(value: string): value is LucideIconName {
+  return value in iconMap;
+}
