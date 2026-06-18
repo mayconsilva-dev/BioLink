@@ -6,6 +6,11 @@
  * Personalize sua página de bio links alterando os valores abaixo.
  * Não é necessário modificar componentes React ou estilos.
  *
+ * Observação: os `links` abaixo são o fallback estático. Se você configurar o
+ * Supabase (veja o README → "Painel de admin"), poderá fazer login em #/admin
+ * e gerenciar os links pela nuvem, e estes aqui passam a ser usados apenas
+ * quando o banco ainda não tem links.
+ *
  * Campos disponíveis:
  * - profile: foto, nome, @handle e bio
  * - links: botões principais (título, URL, ícone, destaque opcional)

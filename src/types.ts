@@ -33,6 +33,46 @@ export interface LinkItem {
   highlighted?: boolean;
 }
 
+/** Linha da tabela `links` no Supabase. */
+export interface LinkRow {
+  id: string;
+  user_id: string;
+  title: string;
+  url: string;
+  icon: string;
+  highlighted: boolean;
+  visible: boolean;
+  position: number;
+  created_at: string;
+}
+
+/** Linha da tabela `profiles` no Supabase. */
+export interface ProfileRow {
+  user_id: string;
+  name: string;
+  handle: string;
+  bio: string;
+  avatar_url: string;
+  updated_at: string;
+}
+
+/** Campos editáveis do perfil no painel de admin. */
+export interface ProfileDraft {
+  name: string;
+  handle: string;
+  bio: string;
+  avatar_url: string;
+}
+
+/** Campos editáveis de um link no painel de admin. */
+export interface LinkDraft {
+  title: string;
+  url: string;
+  icon: LucideIconName;
+  highlighted: boolean;
+  visible: boolean;
+}
+
 export interface SocialLink {
   id: string;
   url: string;
